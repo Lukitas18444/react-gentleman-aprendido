@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Button } from './components/Button'
+import { Header } from './componentsPages/Header'
 
 
 import './App.css'
@@ -16,8 +17,10 @@ function App() {
     console.log(count)
   }
 
+  const [homeUrl, setHomeUrl]  = useState('homeUrl')
   return (
     <>
+      <Header home = {homeUrl} item='item' contacto= 'contacto' ></Header>
 
       <Button  pruebaFunction={handleClick} label='+' />
       <div>{count} </div>
