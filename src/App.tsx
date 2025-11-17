@@ -17,10 +17,19 @@ function App() {
     console.log(count)
   }
 
-  const [homeUrl, setHomeUrl]  = useState('homeUrl')
+  const [homeUrl, setHomeUrl]  = useState(true);
+
+  const prueba = () => {
+    setHomeUrl(!homeUrl)
+
+  }
+
+
+
+
   return (
     <>
-      <Header home = {homeUrl} item='item' contacto= 'contacto' ></Header>
+      <Header prueba={prueba}  home = {homeUrl ? 'home' : 'HomeUrl'}  item='item' contacto= 'contacto' ></Header>
 
       <Button  pruebaFunction={handleClick} label='+' />
       <div>{count} </div>
