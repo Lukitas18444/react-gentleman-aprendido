@@ -4,6 +4,7 @@ import { Header } from './componentsPages/Header'
 
 
 import './App.css'
+import { Busqueda } from './components/Busqueda'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,7 +31,7 @@ function App() {
   return (
     <>
       <Header prueba={prueba}  home = {homeUrl ? 'home' : 'HomeUrl'}  item='item' contacto= 'contacto' ></Header>
-
+      <Busqueda></Busqueda>
       <Button  pruebaFunction={handleClick} label='+' />
       <div>{count} </div>
       <Button  pruebaFunction={handleResta} label='-' />
